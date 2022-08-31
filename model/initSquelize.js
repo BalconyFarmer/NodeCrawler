@@ -116,6 +116,7 @@ class initSquelize {
             time: DataTypes.STRING(),
             href: DataTypes.STRING(),
             type: DataTypes.STRING(),
+            indexTime: DataTypes.INTEGER(),
         }, {
             timestamps: false // 开启/关闭事件戳
         })
@@ -130,9 +131,21 @@ class initSquelize {
             time: postData.time,
             href: postData.href,
             type: postData.type,
+            indexTime: postData.indexTime,
         })
         return result
     }
+
+    async findCrawler(postData) {
+        const result = await this.CMFcrawler.findAll({
+            where: {
+                time: postData.time
+            }
+        })
+        return result
+    }
+
+
 
     // 添加鱼照片
     async saveDaily(postData) {
