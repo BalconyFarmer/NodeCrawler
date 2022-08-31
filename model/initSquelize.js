@@ -115,6 +115,7 @@ class initSquelize {
             onlineNumber: DataTypes.INTEGER(),
             time: DataTypes.STRING(),
             href: DataTypes.STRING(),
+            type: DataTypes.STRING(),
         }, {
             timestamps: false // 开启/关闭事件戳
         })
@@ -128,6 +129,7 @@ class initSquelize {
             onlineNumber: postData.onlineNumber,
             time: postData.time,
             href: postData.href,
+            type: postData.type,
         })
         return result
     }

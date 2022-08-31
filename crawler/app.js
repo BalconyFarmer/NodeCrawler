@@ -227,7 +227,8 @@ async function run() {
             contents: styduArr[0].title,
             onlineNumber: see,
             time: styduArr[0].time,
-            href: styduArr[0].href
+            href: styduArr[0].href,
+            type: styduArr[0].type
         }
         const result = await initSequelize.saveCrawler(postData)
 
