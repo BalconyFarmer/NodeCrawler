@@ -1,0 +1,304 @@
+Error: ER_CON_COUNT_ERROR: Too many connections
+    at Handshake.Sequence._packetToError (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+    --------------------
+    at Protocol._enqueue (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:202:8)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\co-mysql\index.js:10:10)
+    at next (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:90:21)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:45:5)
+    at new MysqlStore (G:\0-github\koa-api\node_modules\koa-mysql-session\index.js:50:8)
+    at SessionApp.init (G:\0-github\koa-api\common\session.js:34:20)
+数据库链接失败!!!!: ConnectionError [SequelizeConnectionError]: Too many connections
+    at G:\0-github\koa-api\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:133:19
+    at tryCatcher (G:\0-github\koa-api\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:15:14)
+    at processImmediate (internal/timers.js:461:21) {
+  parent: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  },
+  original: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  }
+}
+Error: ER_CON_COUNT_ERROR: Too many connections
+    at Handshake.Sequence._packetToError (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+    --------------------
+    at Protocol._enqueue (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:202:8)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\co-mysql\index.js:10:10)
+    at next (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:90:21)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:45:5)
+    at new MysqlStore (G:\0-github\koa-api\node_modules\koa-mysql-session\index.js:50:8)
+    at SessionApp.init (G:\0-github\koa-api\common\session.js:34:20)
+Error: ER_CON_COUNT_ERROR: Too many connections
+    at Handshake.Sequence._packetToError (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+    --------------------
+    at Protocol._enqueue (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:202:8)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\co-mysql\index.js:10:10)
+    at next (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:90:21)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:45:5)
+    at new MysqlStore (G:\0-github\koa-api\node_modules\koa-mysql-session\index.js:50:8)
+    at SessionApp.init (G:\0-github\koa-api\common\session.js:34:20)
+Error: ER_CON_COUNT_ERROR: Too many connections
+    at Handshake.Sequence._packetToError (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+    --------------------
+    at Protocol._enqueue (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:202:8)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\co-mysql\index.js:10:10)
+    at next (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:90:21)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:45:5)
+    at new MysqlStore (G:\0-github\koa-api\node_modules\koa-mysql-session\index.js:50:8)
+    at SessionApp.init (G:\0-github\koa-api\common\session.js:34:20)
+数据库链接失败!!!!: ConnectionError [SequelizeConnectionError]: Too many connections
+    at G:\0-github\koa-api\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:133:19
+    at tryCatcher (G:\0-github\koa-api\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:15:14)
+    at processImmediate (internal/timers.js:461:21) {
+  parent: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  },
+  original: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  }
+}
+Error: ER_CON_COUNT_ERROR: Too many connections
+    at Handshake.Sequence._packetToError (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+    --------------------
+    at Protocol._enqueue (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:202:8)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\co-mysql\index.js:10:10)
+    at next (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:90:21)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:45:5)
+    at new MysqlStore (G:\0-github\koa-api\node_modules\koa-mysql-session\index.js:50:8)
+    at SessionApp.init (G:\0-github\koa-api\common\session.js:34:20)
+Error: ER_CON_COUNT_ERROR: Too many connections
+    at Handshake.Sequence._packetToError (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:309:12)
+    at readableAddChunk (_stream_readable.js:284:9)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:188:23)
+    --------------------
+    at Protocol._enqueue (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (G:\0-github\koa-api\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (G:\0-github\koa-api\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (G:\0-github\koa-api\node_modules\mysql\lib\Pool.js:202:8)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\co-mysql\index.js:10:10)
+    at next (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:90:21)
+    at MysqlStore.<anonymous> (G:\0-github\koa-api\node_modules\koa-mysql-session\node_modules\co\index.js:45:5)
+    at new MysqlStore (G:\0-github\koa-api\node_modules\koa-mysql-session\index.js:50:8)
+    at SessionApp.init (G:\0-github\koa-api\common\session.js:34:20)
+数据库链接失败!!!!: ConnectionError [SequelizeConnectionError]: Too many connections
+    at G:\0-github\koa-api\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:133:19
+    at tryCatcher (G:\0-github\koa-api\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:15:14)
+    at processImmediate (internal/timers.js:461:21) {
+  parent: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  },
+  original: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  }
+}
+You have triggered an unhandledRejection, you may have forgotten to catch a Promise rejection:
+SequelizeConnectionError: Too many connections
+    at G:\0-github\koa-api\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:133:19
+    at tryCatcher (G:\0-github\koa-api\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:15:14)
+    at processImmediate (internal/timers.js:461:21)

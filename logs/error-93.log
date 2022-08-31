@@ -1,0 +1,47 @@
+数据库链接失败!!!!: ConnectionError [SequelizeConnectionError]: Too many connections
+    at G:\0-github\koa-api\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:133:19
+    at tryCatcher (G:\0-github\koa-api\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (G:\0-github\koa-api\node_modules\bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:93:12)
+    at _drainQueue (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (G:\0-github\koa-api\node_modules\bluebird\js\release\async.js:15:14)
+    at processImmediate (internal/timers.js:461:21) {
+  parent: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  },
+  original: Error: Too many connections
+      at Packet.asError (G:\0-github\koa-api\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (G:\0-github\koa-api\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:417:32)
+      at PacketParser.onPacket (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (G:\0-github\koa-api\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0-github\koa-api\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:309:12)
+      at readableAddChunk (_stream_readable.js:284:9)
+      at Socket.Readable.push (_stream_readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_CON_COUNT_ERROR',
+    errno: 1040,
+    sqlState: '',
+    sqlMessage: 'Too many connections'
+  }
+}

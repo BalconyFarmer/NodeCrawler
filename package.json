@@ -1,0 +1,39 @@
+{
+  "name": "static-use-middleware",
+  "version": "1.0.0",
+  "description": "koa start demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "build": "npm run build"
+  },
+  "keywords": [
+    "koajs"
+  ],
+  "author": "chenshenhai",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.3.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-jwt": "^4.0.3",
+    "koa-mysql-session": "^0.0.2",
+    "koa-router": "^9.0.1",
+    "koa-session-minimal": "^4.0.0",
+    "koa-static": "^3.0.0",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.21.3",
+    "cheerio": "^1.0.0-rc.12",
+    "moment": "^2.29.4",
+    "puppeteer": "^16.2.0"
+  },
+  "engines": {
+    "node": ">=7.6.0",
+    "npm": ">=3.0.0"
+  },
+  "devDependencies": {
+    "mysql2": "^2.1.0"
+  }
+}

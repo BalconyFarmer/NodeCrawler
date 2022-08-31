@@ -1,0 +1,10 @@
+服务启动成功 port http://localhost:8084
+服务启动成功 port http://192.168.2.165:8084
+服务启动成功 port http://localhost:8084
+服务启动成功 port http://192.168.2.165:8084
+服务启动成功 port http://localhost:8084
+服务启动成功 port http://192.168.2.165:8084
+服务启动成功 port http://localhost:8084
+服务启动成功 port http://192.168.2.165:8084
+Executing (default): SELECT 1+1 AS result
+数据库连接成功
