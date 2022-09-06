@@ -18,13 +18,16 @@ async function run() {
         await page.goto("https://www.cmfish.com/bbs/index.php");
         let content = await page.content();
 
+        // 在线人数
+        let $ = cheerio.load(content);
+        let onlineNumber = $('.xs1').children().eq(0).text()
+
         // 2- ※ 学习专区 ※
         let styduArr = []
         const result1 = await run1(browser, content)
         result1.forEach(item => {
             styduArr.push(item)
         })
-        console.log(result1, "111111111111111111111111111111")
 
         styduArr.forEach(item => {
             item.indexTime = moment(item.time).unix();
@@ -32,16 +35,17 @@ async function run() {
         styduArr.sort(function (a, b) {
             return b.indexTime - a.indexTime
         });
-
         let timeP = {
             time: styduArr[0].time
         }
         const resultP = await initSequelize.findCrawler(timeP)
-        console.log(resultP.length, "+++++++++++++++++++++++++++++++++++++++")
+        console.log(styduArr[0], "++++++++++++")
+        console.log("数据库查询结果", resultP.length)
+
         if (resultP.length <= 0) {
             const postData = {
                 contents: styduArr[0].title,
-                onlineNumber: 11,
+                onlineNumber: onlineNumber,
                 time: styduArr[0].time,
                 href: styduArr[0].href,
                 type: styduArr[0].type,
