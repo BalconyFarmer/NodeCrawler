@@ -4,8 +4,8 @@ const config = {
     // corsAdress: 'http://localhost:8081',
     corsAdress: '*',
 
-    // sqlAdress: 'localhost', // 数据库地址
-    sqlAdress: '192.168.2.179',
+    sqlAdress: 'localhost', // 数据库地址
+    // sqlAdress: '192.168.2.179',
     USERNAME: "root",
     PASSWORD: "password",
     DATABASE: 'db_behance',

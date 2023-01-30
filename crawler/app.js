@@ -4,14 +4,15 @@ var moment = require('moment')
 const {initSequelize} = require("../app.js")
 const {run1} = require('./sub/craw1')
 
-const mode = true // true 循环模式 false 开发调试模式
+const mode = false // true 循环模式 false 开发调试模式
 
 async function run() {
     const browser = await puppeteer.launch({
         headless: mode, //这里我设置成false主要是为了让大家看到效果，设置为true就不会打开浏览器
         slowMo: 200, // slow down by 250ms
-        // executablePath: '/usr/bin/chromium-browser', // 树莓派特供
+        // executablePath: '/usr/bin/chromium-browser', // 树莓派特供 https://chsamii.medium.com/puppeteer-on-raspbian-nodejs-3425ccea470e
         // args: ['--no-sandbox', '--disable-setuid-sandbox'] // 树莓派特供
+
     });
 
     try {
