@@ -37,11 +37,12 @@ async function run() {
         styduArr.sort(function (a, b) {
             return b.indexTime - a.indexTime
         });
+        console.log(styduArr[0], "++++++++++++")
+
         let timeP = {
             time: styduArr[0].time
         }
         const resultP = await initSequelize.findCrawler(timeP)
-        console.log(styduArr[0], "++++++++++++")
         console.log("数据库查询结果", resultP.length)
 
         if (resultP.length <= 0) {

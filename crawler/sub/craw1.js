@@ -90,7 +90,7 @@ async function run1(browser, content) {
         })
     })
 
-    await timeout(10)
+    await timeout(3)
 
     return styduArr
 }
